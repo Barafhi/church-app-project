@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Song Collection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .song-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .song {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    .show-button {
+      display: block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .show-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="song-container">
+  <!-- Button to show Song 1 -->
+  <button class="show-button" onclick="showSong(1)">Show Song 1</button>
+
+  <!-- Song 1 content -->
+  <div id="song1" class="song">
+    <h2>Song 1: Title</h2>
+    <p>Lyrics for Song 1 go here...</p>
+  </div>
+
+  <!-- Repeat the structure for each song -->
+  <!-- Button and content for Song 2 -->
+  <button class="show-button" onclick="showSong(2)">Show Song 2</button>
+  <div id="song2" class="song">
+    <h2>Song 2: Title</h2>
+    <p>Lyrics for Song 2 go here...</p>
+  </div>
+
+  <!-- Add more buttons and content for additional songs -->
+
+</div>
+
+<script>
+  function showSong(songNumber) {
+    // Hide all songs
+    let songs = document.querySelectorAll('.song');
+    songs.forEach(song => song.style.display = 'none');
+
+    // Show the selected song
+    let selectedSong = document.getElementById('song' + songNumber);
+    if (selectedSong) {
+      selectedSong.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>

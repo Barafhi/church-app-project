@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AME Hymn Book</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+        margin: 0;
+        background-color:#8F1919;
+        text-align: center; /* Center-align the text for all child elements */
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(125, 40, 107);
+            color: white;
+        }
+
+        .body {
+            padding: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            color: white;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .body p {
+            text-align: left;
+        }
+
+        h1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+            font-weight: bold;
+            width: 200px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        #Home_page {
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>African <br>Methodist Episcopal <br>church</h1>
+        <div class="body">
+        <section>
+            
+               <center> <h3>A NO BVA KHA MUNWALI</h3></center>
+                <p>
+                    Idzi nyimbo dzi bva kha nyimbo dzo ḓoweleaho dza Tshisuthu na dzinwe dzi nobva kha nyimbo dza “Phalaphala”.
+                    <br>Ri livhuwa vhafunzi na vhathu vhanzhi Vhe Vha khuṱhedzela uri mushumo uyu u bveledzwe. Ri elelwa maipfi a ṱhuṱhuwedzo a no bva kha munna wa vhane muingameli vhafunzi vho Emmanuel Muthivhi Makhuvha Vhe Vha thoma mushumo uyu,
+                    <br>Bugu iyi ndi nwala tshi tshihumbudzo tsha khonani yanga Vho-M.M. Sinoamadi Vhe Vha lovha nga 27/04/2000. Ya dovha ya Vha tshihumbudzo tsha nwana wanga Maemu Maiwashe we a ri siya nga 12/12/2004. Ri ḓo vha humbula misi yoṱhe.
+                    <br>Kereke ya AME i ḓivhea sa kereke ya u imba, Nyimbo dzi na tshiga tshihulwane kha mushumo wa kereke ino.
+                    <br>Ndi khumbulo yashu uri Luimbo ulu lu ḓo funga ḓenzhe mbiluni dza vhane vha ḓo lu shumisa
+                </p>
+                <h3><center><i>Maṱamela Joseph Maiwashe</i></center></h3>
+        
+        </section>
+        <button id="Home_page" onclick="songList()">
+            Song List
+        </button>
+        <script>
+            function songList(){
+                window.location.href= "firstPage.html";
+                function RiAURenda(){
+                    console.log("Kha ri livhuwe Murena,<br> Thendo dzi iswe ha Ene,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.\n" + "Ndi Murena wa marena,<br> Khuliso iye ha Khotsi,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.")
+                }
+            }
+
+        </script>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p><center>Rights reserved by <b><i>THENDO RAMURAFHI</i></b></center></p>
+        </div>
+    </footer>
+</body>
+
+</html>

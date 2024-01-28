@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Song Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .song-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .song {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .show-button {
+            display: block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .show-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="song-container">
+        <!-- Dynamically generate buttons and content for each song -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const numSongs = 183;
+
+                for (let i = 1; i <= numSongs; i++) {
+                    // Create button
+                    const button = document.createElement('button');
+                    button.className = 'show-button';
+                    button.innerText = 'Show Song ' + i;
+                    button.onclick = function () {
+                        showSong(i);
+                    };
+
+                    // Create song content
+                    const songContent = document.createElement('div');
+                    songContent.id = 'song' + i;
+                    songContent.className = 'song';
+                    songContent.innerHTML = `
+                        <h2>Song ${i}: Kha ri livhuwe Murena</h2>
+                        <p>
+                            Kha ri livhuwe Murena,<br> Thendo dzi iswe ha Ene,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.
+                        </p>
+                        <p>
+                            Ndi Murena wa marena,<br> Khuliso iye ha Khotsi,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.
+                        </p>
+                        <p>
+                            Ni ri muvhusi wa shango,<br> O ri thusa ri sa tei,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.
+                        </p>
+                        <p>
+                            Zwililo zwi tshi ri wela,<br> U ri ḓela nga khuthadzo,<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.
+                        </p>
+                        <p>
+                            Zwoṱhe zwivhumbwa zwa shango,<br> U zwi tonda a sa neti<br> Ngauri lufuno lwawe,<br> Lu elela lu sa gumi.
+                        </p>
+                    `;
+
+                    // Append button and content to the container
+                    document.querySelector('.song-container').appendChild(button);
+                    document.querySelector('.song-container').appendChild(songContent);
+                }
+            });
+
+            function showSong(songNumber) {
+                // Hide all songs
+                let songs = document.querySelectorAll('.song');
+                songs.forEach(song => song.style.display = 'none');
+
+                // Show the selected song
+                let selectedSong = document.getElementById('song' + songNumber);
+                if (selectedSong) {
+                    selectedSong.style.display = 'block';
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

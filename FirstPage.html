@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 80%; /* Adjust the maximum width as needed */
+      margin: 80px auto 20px; /* Center the button container horizontally and add space from the top */
+      position: relative;
+      z-index: 1; /* Ensure the button container is above other elements */
+    }
+
+    .button {
+      display: block;
+      text-decoration: none;
+      background-color: #4CAF50; /* Green background color (you can customize) */
+      color: white;
+      padding: 10px;
+      margin: 5px 0; /* Adjust the margin between buttons */
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%; /* Make the button take the full width of the container */
+    }
+
+    .button:hover {
+      background-color: #45a049; /* Darker green on hover (you can customize) */
+    }
+
+    .home-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #3498db; /* Blue background color (you can customize) */
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 2; /* Ensure the home button is above other elements */
+    }
+
+    .home-button:hover {
+      background-color: #2980b9; /* Darker blue on hover (you can customize) */
+    }
+  </style>
+  <title>Your Website</title>
+</head>
+<body>
+
+<div class="button-container">
+  <a href="Hymn_7.html" class="button">Hymn 7: Ri a u renda</a>
+  <a href="Hymn_8.html" class="button">Hymn 8: Kha ri Livhuwe Murena</a>
+  <!-- Add more buttons as needed -->
+</div>
+
+<a href="home.html" class="home-button">Home</a>
+
+<!-- Your content goes here -->
+
+</body>
+</html>
